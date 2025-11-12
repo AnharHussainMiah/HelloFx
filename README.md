@@ -2,14 +2,14 @@
 
 This is an example "JavaFX" codebase built using the new [Grind](https://github.com/AnharHussainMiah/grind) build tool.
 
-While `grind` uses Maven Artifact IDs to handle dependencies, JavaFx is a little different in that we need to make sure the native dynamic libraries (DLL/SO) files are included in the `src/main/resources` folder as well as the JavaFX Jar files in our usual `libs` folder.
+While `grind` uses Maven Artifact IDs to handle dependencies, JavaFX is a little different in that we need to make sure the native dynamic libraries (DLL/SO) files are included in the `src/main/resources` folder as well as the JavaFX Jar files in our usual `libs` folder.
 
-This is easy enough, just download the JavaFX SDK and extract the `jar` and `so` files into the correct place. We fully automate this process
+This is easy enough, just download the JavaFX SDK and extract the `jar` and `so` files into the correct places. We fully automate this process
 using `grind` task feature, see below
 
-## How to compile, step 1 setup for JavaFX
+## Step 1: setup JavaFX
 
-Because we need to "patch" this project to incldue the required JavaFX dependencies, we can just use `grind` custom task to handle this for us:
+Because we need to "patch" this project to include the required JavaFX dependencies, we can just use `grind` custom task to handle this for us:
 
 ```shell
 $ grind task initJavafx
@@ -17,7 +17,7 @@ $ grind task initJavafx
 
 This will automatically download, extract and copy the required files into the correct folders.
 
-And then you can build and run your project with the follwing command:
+And then you can build and run your project with the following command:
 
 ```shell
 $ grind run
